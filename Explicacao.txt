@@ -1,0 +1,17 @@
+Basicamente, para implementar o PSET, segui à risca o PDF disponibilizado pelo professor.
+
+Na seção 1.0, fiz o download do Python e pesquisei vídeos sobre como usar Python no Visual Studio Code, para trabalhar em uma interface gráfica com a qual já estou acostumado. O professor também me explicou mais ou menos os critérios de avaliação e o que estava proibido de fazer no PSET.
+
+Na seção 2.0, recebi uma introdução sobre o que exatamente eu iria fazer neste trabalho, com exemplos de cenas de CSI com "let's enhance" e etc. Aprendi como as cores são representadas, basicamente um espectro de preto a branco (0 a 255), e também que para representar uma imagem, usamos a largura, altura e uma matriz das cores de cada pixel. Por fim, aprendi a carregar, salvar e mostrar imagens no main do programa para realizar testes sem depender do test.py fornecido pelo professor.
+
+Na seção 3.0, comecei a colocar a mão na massa. Primeiro, adicionei o caso de teste 2, utilizando uma imagem de largura 4, altura 1 e pixels [29, 89, 136, 200]. Respondi à primeira pergunta sobre como essa imagem ficaria com os pixels invertidos, onde precisei subtrair os valores de 255. Em seguida, criei o test_invertida_2 para verificar se a imagem estava recebendo o resultado esperado. Tive que corrigir alguns erros simples, como o uso do número 256 ao invés de 255 e a inversão de x e y no for. Resolvi também a questão 2, gerando a imagem bluegill_invertida.png.
+
+Na seção 4.0, aprendi sobre correlação, que consiste em aplicar um kernel (matriz) a uma imagem, alterando os pixels da imagem original. Fiz a questão 3 no papel, uma conta matemática, e criei a função get_pixel2, que lida com pixels fora da imagem, estendendo-a para que os pixels mais próximos sejam usados. Também criei a função de correlação, que aplica um kernel à imagem, gerando uma nova imagem. Resolvi a questão 4, gerando a imagem pigbird_correlacionada.png.
+
+Na seção 5.0, desenvolvi a função de borrado, que usa a função de correlação para gerar um kernel nxn de valores idênticos que somam 1, gerando a imagem cat_borrado.png. Fiz também a função focada, que aplica um efeito de foco na imagem usando a imagem original e a borrada, de acordo com uma fórmula do professor. Resolvi a questão 5, demonstrando os cálculos para obter o kernel único, e gerei a imagem python_focada.png.
+
+Finalmente, na seção 6.0, criei a função de detecção de bordas usando o operador Sobel, que utiliza dois kernels, Kx e Ky, para realçar as bordas verticais e horizontais, respectivamente. Correlacionei cada um com a imagem original para calcular imagem_kx (bordas verticais) e imagem_ky (bordas horizontais). Em seguida, apliquei a raiz quadrada da soma dos quadrados de imagem_kx e imagem_ky, combinando as bordas horizontais e verticais. Para isso, precisei ajustar a função de correlação, adicionando uma condição if-else para arredondar apenas no final. Resolvi a questão 6, explicando o funcionamento dos kernels e gerando a imagem construct_bordas.png.
+
+Após isso, todos os testes no test.py passaram, então escrevi as respostas no papel almaço, comentei as questões e finalizei este documento. Coloquei tudo em uma pasta com o pset1.py e as imagens das questões e enviei para o professor.
+
+Foi assim que implementei o PSET 1 de Linguagens de Programação.
